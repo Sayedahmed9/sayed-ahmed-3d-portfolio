@@ -9,12 +9,37 @@ export function Hero() {
         <span className="font-display text-sm font-bold tracking-tight md:text-base">
           SA<span className="text-primary">®</span>
         </span>
-        <nav className="flex items-center gap-6 text-xs font-medium uppercase tracking-widest text-muted-foreground md:text-sm">
+        <nav className="flex flex-wrap items-center justify-end gap-x-5 gap-y-2 text-xs font-medium uppercase tracking-widest text-muted-foreground md:text-sm">
           <a href="#intro" className="transition-colors hover:text-foreground">
             Intro
           </a>
           <a href="#skills" className="transition-colors hover:text-foreground">
             Skills
+          </a>
+          <a href="#certificates" className="transition-colors hover:text-foreground">
+            Certificates
+          </a>
+          <a
+            href="https://www.instagram.com/aahmed.sm"
+            target="_blank"
+            rel="noreferrer"
+            className="transition-colors hover:text-foreground"
+          >
+            Instagram
+          </a>
+          <a
+            href="mailto:sayedahmed260260@gmail.com"
+            className="transition-colors hover:text-foreground"
+          >
+            Gmail
+          </a>
+          <a
+            href="https://www.linkedin.com/in/sayed-ahmed-a856782b9"
+            target="_blank"
+            rel="noreferrer"
+            className="transition-colors hover:text-foreground"
+          >
+            LinkedIn
           </a>
         </nav>
       </header>
