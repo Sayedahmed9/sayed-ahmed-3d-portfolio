@@ -16,6 +16,9 @@ export function Hero() {
           <a href="#skills" className="transition-colors hover:text-foreground">
             Skills
           </a>
+          <a href="#certificates" className="transition-colors hover:text-foreground">
+            Certificates
+          </a>
           <a
             href="https://www.instagram.com/aahmed.sm"
             target="_blank"
