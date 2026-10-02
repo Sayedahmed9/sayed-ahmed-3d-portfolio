@@ -1,76 +1,32 @@
+import { profile } from '@/lib/content'
+
 export function Hero() {
   return (
     <section
       id="intro"
-      className="relative flex min-h-svh flex-col justify-between overflow-hidden px-6 pb-10 pt-8 md:px-12 md:pb-16 md:pt-10"
+      className="relative z-10 flex min-h-svh scroll-mt-24 flex-col justify-end px-6 pb-16 pt-28 md:px-8 md:pb-24"
     >
-      {/* top bar */}
-      <header className="flex items-center justify-between">
-        <span className="font-display text-sm font-bold tracking-tight md:text-base">
-          SA<span className="text-primary">®</span>
-        </span>
-        <nav className="flex flex-wrap items-center justify-end gap-x-5 gap-y-2 text-xs font-medium uppercase tracking-widest text-muted-foreground md:text-sm">
-          <a href="#intro" className="transition-colors hover:text-foreground">
-            Intro
-          </a>
-          <a href="#skills" className="transition-colors hover:text-foreground">
-            Skills
-          </a>
-          <a href="#certificates" className="transition-colors hover:text-foreground">
-            Certificates
-          </a>
-          <a
-            href="https://www.instagram.com/aahmed.sm"
-            target="_blank"
-            rel="noreferrer"
-            className="transition-colors hover:text-foreground"
-          >
-            Instagram
-          </a>
-          <a
-            href="mailto:sayedahmed260260@gmail.com"
-            className="transition-colors hover:text-foreground"
-          >
-            Gmail
-          </a>
-          <a
-            href="https://www.linkedin.com/in/sayed-ahmed-a856782b9"
-            target="_blank"
-            rel="noreferrer"
-            className="transition-colors hover:text-foreground"
-          >
-            LinkedIn
-          </a>
-        </nav>
-      </header>
-
-      {/* headline */}
-      <div className="flex flex-1 flex-col justify-center py-12">
-        <p className="mb-6 max-w-md text-pretty text-sm font-medium uppercase tracking-widest text-muted-foreground md:text-base">
-          Student · Lifelong learner · Building things that matter
+      <div className="mx-auto w-full max-w-6xl">
+        <p className="mb-5 text-[11px] font-medium uppercase tracking-[0.22em] text-zinc-400">
+          {profile.role}
         </p>
-        <h1 className="font-display text-[18vw] font-bold leading-[0.85] tracking-tighter text-foreground md:text-[15vw] lg:text-[13rem]">
-          SAYED
+        <h1 className="font-display max-w-3xl text-[clamp(3.4rem,10vw,8.5rem)] font-medium leading-[0.9] tracking-[-0.06em] text-zinc-100">
+          Sayed
           <br />
-          <span className="text-primary">AHMED</span>
+          Ahmed
         </h1>
-      </div>
-
-      {/* bottom row */}
-      <div className="flex flex-col gap-6 border-t border-border pt-6 md:flex-row md:items-end md:justify-between">
-        <p className="max-w-xl text-balance text-lg leading-relaxed text-foreground md:text-xl">
-          Hi, I&apos;m Sayed — a curious student who loves turning ideas into
-          real projects. Always experimenting, always learning something new.
-        </p>
-        <a
-          href="#skills"
-          className="group inline-flex items-center gap-2 self-start whitespace-nowrap rounded-full bg-primary px-6 py-3 text-sm font-semibold uppercase tracking-widest text-primary-foreground transition-transform hover:-translate-y-0.5 md:self-auto"
-        >
-          See my skills
-          <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">
-            &rarr;
-          </span>
-        </a>
+        <div className="mt-10 flex max-w-xl flex-col gap-8 md:flex-row md:items-end md:justify-between">
+          <p className="text-pretty text-base leading-relaxed text-zinc-400 md:text-lg">
+            {profile.intro}
+          </p>
+          <a
+            href="#work"
+            className="inline-flex shrink-0 items-center gap-2 self-start rounded-full bg-emerald-500 px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-zinc-950 transition-colors hover:bg-emerald-400"
+          >
+            View work
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
       </div>
     </section>
   )

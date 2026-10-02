@@ -1,13 +1,23 @@
-import { Certificates } from '@/components/certificates'
+import { About } from '@/components/about'
+import { Contact } from '@/components/contact'
 import { Hero } from '@/components/hero'
-import { Skills } from '@/components/skills'
+import { SceneRoot } from '@/components/scene/scene-root'
+import { SiteNav } from '@/components/site-nav'
+import { Work } from '@/components/work'
 
 export default function Page() {
   return (
-    <main className="min-h-svh bg-background text-foreground">
-      <Hero />
-      <Skills />
-      <Certificates />
-    </main>
+    <>
+      <SceneRoot />
+      <div className="grain pointer-events-none fixed inset-0 z-[1]" />
+      <div className="vignette pointer-events-none fixed inset-0 z-[1]" />
+      <SiteNav />
+      <main id="content" className="relative z-10">
+        <Hero />
+        <About />
+        <Work />
+        <Contact />
+      </main>
+    </>
   )
 }

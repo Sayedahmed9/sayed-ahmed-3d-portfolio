@@ -1,9 +1,13 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Inter, Space_Grotesk } from 'next/font/google'
+import { Geist, Space_Grotesk } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const geist = Geist({
+  subsets: ['latin'],
+  variable: '--font-geist',
+})
+
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
   variable: '--font-space-grotesk',
@@ -12,8 +16,7 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: 'Sayed Ahmed — Portfolio',
   description:
-    'Personal portfolio of Sayed Ahmed — student, learner, and builder. Explore my intro and skills.',
-  generator: 'v0.app',
+    'Personal portfolio of Sayed Ahmed — student, learner, and builder. A minimal, considered space for skills, certificates, and contact.',
   icons: {
     icon: [
       {
@@ -34,11 +37,8 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  colorScheme: 'light dark',
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
-  ],
+  colorScheme: 'dark',
+  themeColor: '#09090b',
 }
 
 export default function RootLayout({
@@ -49,9 +49,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`bg-background ${inter.variable} ${spaceGrotesk.variable}`}
+      className={`bg-zinc-950 ${geist.variable} ${spaceGrotesk.variable}`}
     >
-      <body className="font-sans antialiased">
+      <body className="min-h-svh bg-zinc-950 font-sans text-zinc-100 antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
